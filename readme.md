@@ -1746,6 +1746,5 @@ Splash screen — экран загрузки, который показывае
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/) — обработка жестов.
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started) — анимации.
 
-***Join the community***
 
-Присоединиться к сообществу Expo и задавать вопросы можно в [Discord](https://chat.expo.dev/).
+КОНЕЦ
