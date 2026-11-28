@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock </title>
+    <title>Current Time and Date</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -17,8 +22,50 @@
             font-family: Arial, sans-serif;
         }
 
-        .container {
+        .clock-wrap {
             text-align: center;
         }
 
-        
+        .time {
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+
+        .date {
+            margin-top: 16px;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-wrap">
+        <div class="time" id="time">--:--:--</div>
+        <div class="date" id="date">----</div>
+    </div>
+
+    <script>
+        const timeEl = document.getElementById('time');
+        const dateEl = document.getElementById('date');
+
+        function pad(n) {
+            return n < 10 ? '0' + n : '' + n;
+        }
+
+        function tick() {
+            const now = new Date();
+            timeEl.textContent =
+                pad(now.getHours()) + ':' +
+                pad(now.getMinutes()) + ':' +
+                pad(now.getSeconds());
+            dateEl.textContent =
+                pad(now.getDate()) + '.' +
+                pad(now.getMonth() + 1) + '.' +
+                now.getFullYear();
+        }
+
+        tick();
+        setInterval(tick, 1000);
+    </script>
+</body>
+</html>
