@@ -1431,4 +1431,4 @@ Splash screen — экран загрузки, который показывае
 - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started) — анимации.
 
 
-КОНЕЦ
+КОНЕЦ!!!
